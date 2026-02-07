@@ -1,3 +1,7 @@
+.pageTitleWithDefaultLogo {
+    background-image: url(https://github.com/LunaLenaVR/HintOfGreenCSS/blob/main/lunaflix_logo.png?raw=true);
+}
+
 :root {
   --plot-max-width: 600px;
 }
@@ -18,15 +22,6 @@
 
 body:not(:target) .headerTabs.sectionTabs:not(:focus-within) {
   opacity: 1;
-}
-
-.headerTabs.sectionTabs {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-  max-width: fit-content;
 }
 
 .cardContent-button,
@@ -103,21 +98,7 @@ div.cardOverlayButton-br.flex {
   display: none !important;
 }
 
-#castCollapsible,
-#similarCollapsible,
-#guestCastCollapsible,
-#seriesAirTime,
-#scenesCollapsible,
-div.nextUpSection,
-div.itemExternalLinks.focuscontainer-x,
-div.endsAt.mediaInfoItem,
-div.itemTags.focuscontainer-x,
-div.starRatingContainer.mediaInfoItem,
-div.mediaInfoItem.mediaInfoCriticRating,
-.headerCastButton,
-.pause-button {
-  display: none;
-}
+
 
 .detailRibbon {
   background: transparent !important;
@@ -319,7 +300,6 @@ button[is="emby-button"].emby-tab-button {
   filter: brightness(0.6) blur(40px);
 }
 
-
 .iconOsd,
 .iconOsdProgressOuter,
 .iconOsdProgressInner {
@@ -327,4 +307,49 @@ button[is="emby-button"].emby-tab-button {
   background: transparent;
   border: none;
   box-shadow: none;
+}
+
+.slideshowSwiperContainer {
+  direction: rtl !important;
+  unicode-bidi: bidi-override !important;
+}
+
+.arrow_circle_right,
+.btnToggleLangDir {
+display: none;
+}
+
+/* 1) Par défaut (page seule) : centré */
+#comicsPlayer .swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 2) Collage double-page UNIQUEMENT si deux slides visibles sont adjacentes */
+#comicsPlayer .swiper-wrapper:has(> .swiper-slide-visible + .swiper-slide-visible)
+  > .swiper-slide-visible:has(+ .swiper-slide-visible) {
+  /* 1ère page visible (gauche) -> collée vers le centre */
+  justify-content: flex-end !important;
+}
+
+#comicsPlayer .swiper-wrapper:has(> .swiper-slide-visible + .swiper-slide-visible)
+  > .swiper-slide-visible + .swiper-slide-visible {
+  /* 2e page visible (droite) -> collée vers le centre */
+  justify-content: flex-start !important;
+}
+
+/* 3) Évite les contraintes sur l’image (sinon elle reste “petite” centrée) */
+#comicsPlayer .slider-zoom-container,
+#comicsPlayer img.swiper-slide-img,
+#comicsPlayer .slider-zoom-container img {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+}
+
+.btnDownload,[data-id="downloadall"],[data-id="download"]{
+display:none;
 }
