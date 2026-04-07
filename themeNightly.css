@@ -17,8 +17,8 @@
 /* ~~~~~~~~~~~~~~~~~~~~ GLOBAL CSS VARIABLES ~~~~~~~~~~~~~~~~~~~~ */
 /* Defines core variables used throughout the theme for consistency. */
 :root {
-    --theme-updated-on: "22 February 2026 - 07:07 P.M."; /* Date of last theme update */
-    --theme-name: 'Jellyfish';
+    --theme-updated-on: "07 April 2026 - 07:07 P.M."; /* Date of last theme update */
+    --theme-name: 'LunaFlix';
     --rounded-cards: 15px; /* Standard border-radius */
     --blur: 15px;           /* Default blur intensity */
 }
@@ -342,7 +342,8 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 /* == Default Logo Styling == */
 /* Styles for the Jellyfin logo when a custom one isn't set by the user. */
 .pageTitleWithDefaultLogo {
-    background-image: url(https://cdn.jsdelivr.net/gh/LunaLenaVR/HintOfGreenCSS@main/lunaflix_logo.png?v=1);
+    background-image: var(--logo) !important; /* Uses the --logo variable, ensure it's defined in your color scheme files */
+    background-size: 100% !important; /* Make logo responsive within its container */
 }
 /* Desktop logo dimensions and positioning. */
 .layout-tv .pageTitleWithLogo, .layout-desktop .pageTitleWithLogo {
