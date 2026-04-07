@@ -56,7 +56,9 @@ body, h1, h2, h3, h4, h5, h6, p {
 }
 /* ~~~~~~~~~~~~~~~~~~~~ ACCENT COLOR APPLICATION ~~~~~~~~~~~~~~~~~~~~ */
 /* Styles that apply the theme's accent colors to various UI elements. */
-
+.pageTitleWithDefaultLogo {
+    background-image: url(https://github.com/LunaLenaVR/HintOfGreenCSS/blob/main/lunaflix_logo.png?raw=true);
+}
 /* == Primary Accent Backgrounds == */
 /* Applied to main interactive element backgrounds indicating a primary action or state. */
 .emby-checkbox:checked+span+.checkboxOutline, /* Checked checkboxes outline */
