@@ -342,7 +342,7 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 /* == Default Logo Styling == */
 /* Styles for the Jellyfin logo when a custom one isn't set by the user. */
 .pageTitleWithDefaultLogo {
-    background-image: url(https://cdn.jsdelivr.net/gh/LunaLenaVR/HintOfGreenCSS@main/lunaflix_logo.png);
+    background-image: url(https://cdn.jsdelivr.net/gh/LunaLenaVR/HintOfGreenCSS@main/lunaflix_logo.png?v=1);
 }
 /* Desktop logo dimensions and positioning. */
 .layout-tv .pageTitleWithLogo, .layout-desktop .pageTitleWithLogo {
