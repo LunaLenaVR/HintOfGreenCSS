@@ -2388,7 +2388,3 @@ button.emby-tab-button.guide-date-tab-button.emby-button:focus {
         padding: 10px 20px !important;
     }
 }
-
-#indexPage .homeLibraryButton, .emby-tab-button {
-background-color: #fff !important;
-}
