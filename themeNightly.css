@@ -465,7 +465,6 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 .homeLibraryText,       /* Text for the "Home" or library buttons */
 .emby-button-foreground /* General foreground (text/icon) for Emby buttons */
 {
-	background: var(--header-background-color) !important; /* Use a variable for background, ensure it's defined (e.g., semi-transparent white) */
 	color: var(--secondary-background-color) !important; /* Dark text, assuming light header background */
     transition: color 0.2s ease; /* Smooth color transition on hover/state change */
     top: unset !important;       /* Resets any default vertical positioning */
